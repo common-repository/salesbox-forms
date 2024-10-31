@@ -1,0 +1,126 @@
+.sbf .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.sbf form .sbf-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+	border: 2px solid #00a0d2; /* Blue */;
+}
+
+.sbf form.init .sbf-response-output,
+.sbf form.resetting .sbf-response-output,
+.sbf form.submitting .sbf-response-output {
+	display: none;
+}
+
+.sbf form.sent .sbf-response-output {
+	border-color: #46b450; /* Green */
+}
+
+.sbf form.failed .sbf-response-output,
+.sbf form.aborted .sbf-response-output {
+	border-color: #dc3232; /* Red */
+}
+
+.sbf form.spam .sbf-response-output {
+	border-color: #f56e28; /* Orange */
+}
+
+.sbf form.invalid .sbf-response-output,
+.sbf form.unaccepted .sbf-response-output {
+	border-color: #ffb900; /* Yellow */
+}
+
+.sbf-form-control-wrap {
+	position: relative;
+}
+
+.sbf-not-valid-tip {
+	color: #dc3232;
+	font-size: 1em;
+	font-weight: normal;
+	display: block;
+}
+
+.use-floating-validation-tip .sbf-not-valid-tip {
+	position: relative;
+	top: -2ex;
+	left: 1em;
+	z-index: 100;
+	border: 1px solid #dc3232;
+	background: #fff;
+	padding: .2em .8em;
+	width: 24em;
+}
+
+.sbf-list-item {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
+.sbf-list-item-label::before,
+.sbf-list-item-label::after {
+	content: " ";
+}
+
+.sbf .ajax-loader {
+	visibility: hidden;
+	display: inline-block;
+	background-image: url('../../assets/ajax-loader.svg');
+	width: 20px;
+	height: 20px;
+	border: none;
+	padding: 0;
+	margin: 0 0 0 20px;
+	vertical-align: middle;
+}
+
+.sbf form.submitting .ajax-loader {
+	visibility: visible;
+	animation-name: tenmetsukaiten;
+	animation-duration: 1200ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes tenmetsukaiten {
+	from {
+		opacity: 0.9;
+		transform: rotate(0deg);
+	}
+
+	50% {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 0.9;
+		transform: rotate(359deg);
+	}
+}
+
+.sbf input[type="file"] {
+	cursor: pointer;
+}
+
+.sbf input[type="file"]:disabled {
+	cursor: default;
+}
+
+.sbf .sbf-submit:disabled {
+	cursor: not-allowed;
+}
+
+.sbf input[type="url"],
+.sbf input[type="email"],
+.sbf input[type="tel"] {
+	direction: ltr;
+}

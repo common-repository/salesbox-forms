@@ -1,0 +1,15 @@
+.sbf-not-valid-tip {
+	direction: rtl;
+}
+
+.use-floating-validation-tip .sbf-not-valid-tip {
+	right: 1em;
+}
+
+.sbf-list-item {
+	margin: 0 1em 0 0;
+}
+
+.sbf .ajax-loader {
+	margin: 0 20px 0 0;
+}
